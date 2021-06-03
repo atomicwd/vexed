@@ -54,11 +54,17 @@ Two and three dimensional vectors share the expected functions:
 > returns the cross product of the vector with the provided vector.
 
 > **rot: (angle: number, axis: Axis|Vec3D, useDegrees?: boolean, opts?: Options) => Vec3D**
-> returns a vector rotated around a given axis or vector by the provided angle, **asDegrees** defaults to **false.** The axis argument may be an enum field Axis.X, Axis.Y, Axis.Z or any Vec3D instance. **Axis.X=(1,0,0), Axis.Y=(0,1,0), Axis.Z=(0,0,1)**
+> returns a vector rotated around a given axis or vector by the provided angle, **asDegrees** defaults to **false.** The axis argument may be an enum field Axis.X, Axis.Y, Axis.Z or any Vec3D instance.
 
-### Options
+### Types
 
+Aside from Vec2D and Vec3D, Vexed provided the following types:
+
+**Options**
 Most functions accept an options object. This currently contains only a precision field which will round the components of the vector to the specified number of decimal places. This will be carried forward across all subsequent operations on the vector.
+
+**Axis**
+The Axis enum field Axis.X, Axis.Y and Axis.Z represent the X,Y and Z axes respectively. **Axis.X=(1,0,0), Axis.Y=(0,1,0), Axis.Z=(0,0,1)**
 
 ## Notes
 
