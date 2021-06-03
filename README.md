@@ -41,7 +41,7 @@ Two and three dimensional vectors share the expected functions:
 > returns a boolean determined by the strict equality comparison of each vector component.
 
 > **sgf(precision: number):booleans**
-> returns the vector with the its components rounded to the number of signigicant figures specificed.
+> returns the vector with the its components rounded to the number of significant figures specified.
 
 ### Vec2D functions
 
