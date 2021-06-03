@@ -7,7 +7,7 @@
   "module": "build/module/index.js",
   "repository": "https://github.com/atomicwd/vexed",
   "license": "MIT",
-  "keywords": [],
+  "keywords": ["vector", "2d vector", "3d vector", "math", "2d math", "3d math"],
   "scripts": {
     "build": "run-p build:*",
     "build:main": "tsc -p tsconfig.json",
