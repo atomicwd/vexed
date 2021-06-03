@@ -136,12 +136,16 @@
 				</blockquote>
 				<blockquote>
 					<p><strong>rot: (angle: number, axis: Axis|Vec3D, useDegrees?: boolean, opts?: Options) =&gt; Vec3D</strong>
-					returns a vector rotated around a given axis or vector by the provided angle, <strong>asDegrees</strong> defaults to <strong>false.</strong> The axis argument may be an enum field Axis.X, Axis.Y, Axis.Z or any Vec3D instance. <strong>Axis.X=(1,0,0), Axis.Y=(0,1,0), Axis.Z=(0,0,1)</strong></p>
+					returns a vector rotated around a given axis or vector by the provided angle, <strong>asDegrees</strong> defaults to <strong>false.</strong> The axis argument may be an enum field Axis.X, Axis.Y, Axis.Z or any Vec3D instance.</p>
 				</blockquote>
-				<a href="#options" id="options" style="color: inherit; text-decoration: none;">
-					<h3>Options</h3>
+				<a href="#types" id="types" style="color: inherit; text-decoration: none;">
+					<h3>Types</h3>
 				</a>
-				<p>Most functions accept an options object. This currently contains only a precision field which will round the components of the vector to the specified number of decimal places. This will be carried forward across all subsequent operations on the vector.</p>
+				<p>Aside from Vec2D and Vec3D, Vexed provided the following types:</p>
+				<p><strong>Options</strong>
+				Most functions accept an options object. This currently contains only a precision field which will round the components of the vector to the specified number of decimal places. This will be carried forward across all subsequent operations on the vector.</p>
+				<p><strong>Axis</strong>
+				The Axis enum field Axis.X, Axis.Y and Axis.Z represent the X,Y and Z axes respectively. <strong>Axis.X=(1,0,0), Axis.Y=(0,1,0), Axis.Z=(0,0,1)</strong></p>
 				<a href="#notes" id="notes" style="color: inherit; text-decoration: none;">
 					<h2>Notes</h2>
 				</a>
