@@ -12,7 +12,7 @@ type Vec2Ops = {
     angle: number,
     useDegrees?: boolean,
     opts?: Options
-  ) => XY & Vec<XY>;
+  ) => XY & Vec<XY & Vec2Ops> & Vec2Ops;
 };
 
 export type Vec2 = XY & Vec<XY & Vec2Ops> & Vec2Ops;
