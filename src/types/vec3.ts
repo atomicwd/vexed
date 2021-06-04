@@ -15,13 +15,14 @@ export type XYZ = {
   readonly _z: number;
 };
 
-export type Vec3 = XYZ &
-  Vec<XYZ> & {
-    readonly cross: (vec: XYZ, opts?: Options) => XYZ & Vec<XYZ>;
-    readonly rot: (
-      angle: number,
-      axis: Axis | Vec3,
-      useDegrees?: boolean,
-      opts?: Options
-    ) => XYZ & Vec<XYZ>;
-  };
+type Vec3Ops = {
+  readonly cross: (vec: XYZ, opts?: Options) => XYZ & Vec<XYZ>;
+  readonly rot: (
+    angle: number,
+    axis: Axis | Vec3,
+    useDegrees?: boolean,
+    opts?: Options
+  ) => XYZ & Vec<XYZ>;
+};
+
+export type Vec3 = XYZ & Vec<XYZ & Vec3Ops> & Vec3Ops;

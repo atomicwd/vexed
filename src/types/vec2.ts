@@ -7,11 +7,12 @@ export type XY = {
   readonly _y: number;
 };
 
-export type Vec2 = XY &
-  Vec<XY> & {
-    readonly rot: (
-      angle: number,
-      useDegrees?: boolean,
-      opts?: Options
-    ) => XY & Vec<XY>;
-  };
+type Vec2Ops = {
+  readonly rot: (
+    angle: number,
+    useDegrees?: boolean,
+    opts?: Options
+  ) => XY & Vec<XY>;
+};
+
+export type Vec2 = XY & Vec<XY & Vec2Ops> & Vec2Ops;
