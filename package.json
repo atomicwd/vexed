@@ -1,6 +1,6 @@
 {
   "name": "vexed",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "vector library",
   "main": "build/main/index.js",
   "typings": "build/main/index.d.ts",
