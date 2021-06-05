@@ -13,6 +13,8 @@ type Vec2Ops = {
     useDegrees?: boolean,
     opts?: Options
   ) => XY & Vec<XY & Vec2Ops> & Vec2Ops;
+
+  readonly perp: () => Vec2;
 };
 
 export type Vec2 = XY & Vec<XY & Vec2Ops> & Vec2Ops;
