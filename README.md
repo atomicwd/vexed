@@ -48,6 +48,9 @@ Two and three dimensional vectors share the expected functions:
 > **rot: (angle: number, useDegrees?: boolean, opts?: Options) => Vec2D**
 > returns a vector rotated by the provided angle, **asDegrees** defaults to **false.**
 
+> **perp(clockwise?: boolean, opts?: Options):Vec2D**
+> returns the 2D vector perpendicular to this vector, **clockwise** defaults to **true.**
+
 ### Vec3D functions
 
 > **cross: (vec: Vec3D, opts?: Options) => Vec3D**

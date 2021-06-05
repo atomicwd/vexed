@@ -42,9 +42,9 @@ const vec2 = (x: number, y: number, opts = options): Vec2 => {
         k * Math.acos(dot(v) / (mag() * v.mag({ precision: o.precision + 2 })));
       return round(a, o.precision);
     },
-    perp: (clockwise = true) => {
+    perp: (clockwise = true, o = opts) => {
       const k = clockwise ? 1 : -1;
-      return vec2(k * y, -k * x);
+      return vec2(k * y, -k * x, o);
     },
     toString: () => {
       return `(${rx},${ry})`;

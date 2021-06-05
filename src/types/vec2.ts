@@ -14,7 +14,7 @@ type Vec2Ops = {
     opts?: Options
   ) => XY & Vec<XY & Vec2Ops> & Vec2Ops;
 
-  readonly perp: (clockwise?: boolean) => Vec2;
+  readonly perp: (clockwise?: boolean, opts?: Options) => Vec2;
 };
 
 export type Vec2 = XY & Vec<XY & Vec2Ops> & Vec2Ops;

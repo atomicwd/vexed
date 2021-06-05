@@ -239,6 +239,9 @@ test('perp', (t) => {
 
   const v2 = vec2(-4, 5).perp();
   t.is(v2.dot(v2.perp()), 0);
+
+  const v3 = vec2(-452.253, 5623.236).perp();
+  t.is(v3.dot(v3.perp(false)), 0);
 });
 
 //test toString
