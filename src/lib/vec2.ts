@@ -42,6 +42,7 @@ const vec2 = (x: number, y: number, opts = options): Vec2 => {
         k * Math.acos(dot(v) / (mag() * v.mag({ precision: o.precision + 2 })));
       return round(a, o.precision);
     },
+    perp: () => vec2(y, -x),
     toString: () => {
       return `(${rx},${ry})`;
     },
