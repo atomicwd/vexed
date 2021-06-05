@@ -233,6 +233,10 @@ test('perp', (t) => {
   t.is(v1p.x, 0);
   t.is(v1p.y, -1);
 
+  const v1pcc = vec2(1, 0).perp(false);
+  t.is(v1pcc.x, 0);
+  t.is(v1pcc.y, 1);
+
   const v2 = vec2(-4, 5).perp();
   t.is(v2.dot(v2.perp()), 0);
 });
