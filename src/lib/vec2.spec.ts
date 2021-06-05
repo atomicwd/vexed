@@ -227,6 +227,16 @@ test('unit', (t) => {
   t.is(v4u.y, NaN);
 });
 
+//test perp
+test('perp', (t) => {
+  const v1p = vec2(1, 0).perp();
+  t.is(v1p.x, 0);
+  t.is(v1p.y, -1);
+
+  const v2 = vec2(-4, 5).perp();
+  t.is(v2.dot(v2.perp()), 0);
+});
+
 //test toString
 test('toString', (t) => {
   const v1 = vec2(1, 6);

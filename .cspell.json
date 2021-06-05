@@ -22,7 +22,8 @@
     "transpiled",
     "typedoc",
     "untracked",
-    "gzipped"
+    "gzipped",
+    "perp"
   ],
   "flagWords": [],
   "ignorePaths": [
