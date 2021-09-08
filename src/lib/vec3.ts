@@ -1,5 +1,5 @@
 import { Options } from '../types/vec';
-import { Axis, Vec3, XYZ } from '../types/vec3';
+import { Axis, Vec3 } from '../types/vec3';
 
 import { round, sgf, TO_DEG, TO_RAD } from './math';
 
@@ -9,8 +9,8 @@ const options: Options = {
 };
 
 const vec3 = (x: number, y: number, z: number, opts = options): Vec3 => {
-  const mag = () => (x * x + y * y + z * z) ** 0.5;
-  const dot = (v: XYZ) => x * v._x + y * v._y + z * v._z;
+  const mag:Vec3["mag"] = () => (x * x + y * y + z * z) ** 0.5;
+  const dot:Vec3["dot"] = (v) => x * v._x + y * v._y + z * v._z;
   const rx = round(x, opts.precision);
   const ry = round(y, opts.precision);
   const rz = round(z, opts.precision);
