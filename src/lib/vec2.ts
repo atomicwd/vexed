@@ -1,16 +1,15 @@
-import { Options } from '../types/vec';
-import { Vec2 } from '../types/vec2';
+import { Options } from "../types/vec";
+import { Vec2 } from "../types/vec2";
 
-import { round, sgf, TO_DEG, TO_RAD } from './math';
+import { round, sgf, TO_DEG, TO_RAD } from "./math";
 
-//default options
 const options: Options = {
   precision: 3,
 };
 
 const vec2 = (x: number, y: number, opts = options): Vec2 => {
-  const mag:Vec2["mag"] = () => (x * x + y * y) ** 0.5;
-  const dot:Vec2["dot"] = (v) => x * v._x + y * v._y;
+  const mag: Vec2["mag"] = () => (x * x + y * y) ** 0.5;
+  const dot: Vec2["dot"] = (v) => x * v._x + y * v._y;
 
   const rx = round(x, opts.precision);
   const ry = round(y, opts.precision);

@@ -1,4 +1,4 @@
-import { Options } from './vec';
+import { Options } from "./vec";
 
 export enum Axis {
   X,
@@ -21,24 +21,14 @@ export type Vec3 = {
   readonly dot: (vec: Vec3) => number;
   readonly mag: (opts?: Options) => number;
   readonly unit: (opts?: Options) => Vec3;
-  readonly ang: (
-    vec: Vec3,
-    asDegrees?: boolean,
-    opts?: Options
-  ) => number;
+  readonly ang: (vec: Vec3, asDegrees?: boolean, opts?: Options) => number;
   readonly toString: () => string;
   readonly equals: (v: Vec3) => boolean;
-  readonly cross: (
-    vec: Vec3,
-    opts?: Options
-  ) =>Vec3
+  readonly cross: (vec: Vec3, opts?: Options) => Vec3;
   readonly rot: (
     angle: number,
     axis: Axis | Vec3,
     useDegrees?: boolean,
     opts?: Options
-  ) =>Vec3
+  ) => Vec3;
 };
-
-
-
