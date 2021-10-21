@@ -253,6 +253,15 @@ test("toString", (t) => {
   t.is(v2.toString(), "(1521.41251,5125.12522)");
 });
 
+//test toArray
+test("toArray", (t) => {
+  const v1 = vec2(6, 8);
+  const v2 = vec2(512.51, 552.5141, { precision: 5 });
+
+  t.deepEqual(v1.toArray(), [6, 8]);
+  t.deepEqual(v2.toArray(), [512.51, 552.5141]);
+});
+
 //test equals
 test("equals", (t) => {
   const v1 = vec2(2, 8);

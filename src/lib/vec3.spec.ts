@@ -1,11 +1,11 @@
-import test from 'ava';
+import test from "ava";
 
-import { Axis } from '../types/vec3';
+import { Axis } from "../types/vec3";
 
-import vec3 from './vec3';
+import vec3 from "./vec3";
 
 //test sig fig
-test('sgf', (t) => {
+test("sgf", (t) => {
   const v1 = vec3(4.1512512, 3.14153, 1.5161512631125, { precision: 10 });
   const p1 = 5;
 
@@ -23,7 +23,7 @@ test('sgf', (t) => {
 //   };
 
 //test addition
-test('add', (t) => {
+test("add", (t) => {
   const v1 = vec3(1, 5, 10);
   const v2 = vec3(-2, 3, 2);
   const v3 = vec3(0, -1, 5);
@@ -46,7 +46,7 @@ test('add', (t) => {
 });
 
 //test subtraction
-test('sub', (t) => {
+test("sub", (t) => {
   const v1 = vec3(-2, -3, -1);
   const v2 = vec3(-1, 6, -2);
   const v3 = vec3(0, -1, 0);
@@ -69,7 +69,7 @@ test('sub', (t) => {
 });
 
 //test multiplication
-test('mul', (t) => {
+test("mul", (t) => {
   const v1 = vec3(4, -3, 7);
   const k1 = 2;
   const v2 = vec3(-2, -3, 1);
@@ -103,7 +103,7 @@ test('mul', (t) => {
 });
 
 //test div
-test('div', (t) => {
+test("div", (t) => {
   const v1 = vec3(4, -3, 6);
   const k1 = 2;
   const v2 = vec3(-2, -3, 9);
@@ -137,7 +137,7 @@ test('div', (t) => {
 });
 
 //test decimals
-test('decimals', (t) => {
+test("decimals", (t) => {
   const v1 = vec3(2.145124531, 1.3215151648, 5.12512424, { precision: 5 }); //2.14512, 1.32152, 5.12512
   const v2 = vec3(3.95791531, 5.352362625, 15.521516121, { precision: 5 }); //3.95792, 5.35236, 15.52152
 
@@ -156,7 +156,7 @@ test('decimals', (t) => {
 });
 
 //test rotation
-test('rot', (t) => {
+test("rot", (t) => {
   const v1 = vec3(1, 0, 0);
   const v1x = v1.rot(Math.PI / 2, Axis.X); //rotate 90deg
   t.is(v1x.x, 1);
@@ -185,13 +185,13 @@ test('rot', (t) => {
 });
 
 //test magnitude
-test('mag', (t) => {
+test("mag", (t) => {
   t.is(vec3(3, 2, 5).mag(), 6.164);
   t.is(vec3(0, 0, 0).mag(), 0);
 });
 
 //test dot
-test('dot', (t) => {
+test("dot", (t) => {
   const v1 = vec3(-2, -3, 5);
   const v2 = vec3(-1, 6, 10);
   const v3 = vec3(0, -1, -2);
@@ -211,7 +211,7 @@ test('dot', (t) => {
 });
 
 //test angles
-test('ang', (t) => {
+test("ang", (t) => {
   const v1 = vec3(-2, -3, 5);
   const v2 = vec3(-1, 6, 10);
   const v3 = vec3(0, -1, -2);
@@ -229,7 +229,7 @@ test('ang', (t) => {
 });
 
 //test unit
-test('unit', (t) => {
+test("unit", (t) => {
   const v1u = vec3(-2, -3, 16).unit();
   const v2u = vec3(-1, 6, -4).unit();
   const v3u = vec3(0, -1, 6).unit();
@@ -253,16 +253,25 @@ test('unit', (t) => {
 });
 
 //test toString
-test('toString', (t) => {
+test("toString", (t) => {
   const v1 = vec3(1, 6, 10);
   const v2 = vec3(1521.412512, 5125.1252155, 3128.421516735, { precision: 5 });
 
-  t.is(v1.toString(), '(1,6,10)');
-  t.is(v2.toString(), '(1521.41251,5125.12522,3128.42152)');
+  t.is(v1.toString(), "(1,6,10)");
+  t.is(v2.toString(), "(1521.41251,5125.12522,3128.42152)");
+});
+
+//test toArray
+test("toArray", (t) => {
+  const v1 = vec3(6, 8, 9);
+  const v2 = vec3(512.51, 552.5141, 512.68, { precision: 5 });
+
+  t.deepEqual(v1.toArray(), [6, 8, 9]);
+  t.deepEqual(v2.toArray(), [512.51, 552.5141, 512.68]);
 });
 
 //test equals
-test('equals', (t) => {
+test("equals", (t) => {
   const v1 = vec3(2, 8, 10);
   const v1m2 = vec3(4, 16, 20);
   const v2 = vec3(2.15245, 1.12616, 2.512512161124);
