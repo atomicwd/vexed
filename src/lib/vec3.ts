@@ -63,6 +63,9 @@ const vec3 = (x: number, y: number, z: number, opts = options): Vec3 => {
     toString: () => {
       return `(${rx},${ry},${rz})`;
     },
+    toArray: () => {
+      return [rx, ry, rz];
+    },
     equals: (v) => {
       return rx === v._x && ry === v._y && rz === v._z;
     },

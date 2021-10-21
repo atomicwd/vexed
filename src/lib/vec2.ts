@@ -48,6 +48,9 @@ const vec2 = (x: number, y: number, opts = options): Vec2 => {
     toString: () => {
       return `(${rx},${ry})`;
     },
+    toArray: () => {
+      return [rx, ry];
+    },
     equals: (v) => {
       return rx === v._x && ry === v._y;
     },

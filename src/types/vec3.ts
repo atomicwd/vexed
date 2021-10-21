@@ -23,6 +23,7 @@ export type Vec3 = {
   readonly unit: (opts?: Options) => Vec3;
   readonly ang: (vec: Vec3, asDegrees?: boolean, opts?: Options) => number;
   readonly toString: () => string;
+  readonly toArray: () => [number, number, number];
   readonly equals: (v: Vec3) => boolean;
   readonly cross: (vec: Vec3, opts?: Options) => Vec3;
   readonly rot: (
