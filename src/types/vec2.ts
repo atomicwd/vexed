@@ -8,8 +8,8 @@ export type Vec2 = {
   readonly _x: number;
   readonly _y: number;
   readonly sgf: (precision: number, opts?: Options) => Vec2;
-  readonly mul: (number: number, opts?: Options) => Vec2;
-  readonly div: (number: number, opts?: Options) => Vec2;
+  readonly mul: (arg: number|Vec2, opts?: Options) => Vec2
+  readonly div: (arg: number|Vec2, opts?: Options) => Vec2;
   readonly add: (vec: Vec2, opts?: Options) => Vec2;
   readonly sub: (vec: Vec2, opts?: Options) => Vec2;
   readonly dot: (vec: Vec2) => number;
