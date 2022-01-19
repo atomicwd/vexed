@@ -79,6 +79,10 @@ test("mul", (t) => {
   const v1k3 = v1.mul(k3);
   t.is(v1k3.x, 0);
   t.is(v1k3.y, 0);
+
+  const v1v2 = v1.mul(v2);
+  t.is(v1v2.x, -8);
+  t.is(v1v2.y, 9);
 });
 
 //test multiplication with decimals
@@ -108,6 +112,10 @@ test("mul dec", (t) => {
   const v1k3 = v1.mul(k3);
   t.is(v1k3.x, 0);
   t.is(v1k3.y, 0);
+
+  const v1v2 = v1.mul(v2);
+  t.is(v1v2.x, -2.1);
+  t.is(v1v2.y, 57.5);
 });
 
 //test division
@@ -137,6 +145,10 @@ test("div", (t) => {
   const v1k3 = v1.div(k3);
   t.is(v1k3.x, Infinity);
   t.is(v1k3.y, -Infinity);
+
+  const v1v2 = v1.div(v2);
+  t.is(v1v2.x, -2);
+  t.is(v1v2.y, 1);
 });
 
 //test decimal addition
