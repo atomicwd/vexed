@@ -7,6 +7,8 @@ const options: Options = {
   precision: 3,
 };
 
+
+
 const vec2 = (x: number, y: number, opts = options): Vec2 => {
   const mag: Vec2["mag"] = () => (x * x + y * y) ** 0.5;
   const dot: Vec2["dot"] = (v) => x * v._x + y * v._y;
@@ -19,8 +21,8 @@ const vec2 = (x: number, y: number, opts = options): Vec2 => {
     x: rx,
     y: ry,
     sgf: (p, o = opts) => vec2(sgf(x, p), sgf(y, p), o),
-    mul: (n, o = opts) => vec2(x * n, y * n, o),
-    div: (n, o = opts) => vec2(x / n, y / n, o),
+    mul: (a, o = opts) => typeof a==="number"?vec2(x * a, y * a, o):vec2(x*a._x, y*a._y,o),
+    div: (a, o = opts) => typeof a==="number"?vec2(x/ a, y / a, o):vec2(x/a._x, y/a._y,o),
     add: (v, o = opts) => vec2(x + v._x, y + v._y, o),
     sub: (v, o = opts) => vec2(x - v._x, y - v._y, o),
     dot: (v) => dot(v),
