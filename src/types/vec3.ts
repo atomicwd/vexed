@@ -14,8 +14,8 @@ export type Vec3 = {
   readonly _y: number;
   readonly _z: number;
   readonly sgf: (precision: number, opts?: Options) => Vec3;
-  readonly mul: (number: number, opts?: Options) => Vec3;
-  readonly div: (number: number, opts?: Options) => Vec3;
+  readonly mul: (arg: number | Vec3, opts?: Options) => Vec3;
+  readonly div: (arg: number | Vec3, opts?: Options) => Vec3;
   readonly add: (vec: Vec3, opts?: Options) => Vec3;
   readonly sub: (vec: Vec3, opts?: Options) => Vec3;
   readonly dot: (vec: Vec3) => number;

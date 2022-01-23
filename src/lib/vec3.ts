@@ -22,8 +22,14 @@ const vec3 = (x: number, y: number, z: number, opts = options): Vec3 => {
     y: ry,
     z: rz,
     sgf: (p, o = opts) => vec3(sgf(x, p), sgf(y, p), sgf(z, p), o),
-    mul: (n, o = opts) => vec3(x * n, y * n, z * n, o),
-    div: (n, o = opts) => vec3(x / n, y / n, z / n, o),
+    mul: (a, o = opts) =>
+      typeof a === "number"
+        ? vec3(x * a, y * a, z * a, o)
+        : vec3(x * a._x, y * a._y, z * a._z, o),
+    div: (a, o = opts) =>
+      typeof a === "number"
+        ? vec3(x / a, y / a, z / a, o)
+        : vec3(x / a._x, y / a._y, z / a._z, o),
     add: (v, o = opts) => vec3(x + v._x, y + v._y, z + v._z, o),
     sub: (v, o = opts) => vec3(x - v._x, y - v._y, z - v._z, o),
     dot: (v) => dot(v),
