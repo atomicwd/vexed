@@ -100,6 +100,11 @@ test("mul", (t) => {
   t.is(v1k3.x, 0);
   t.is(v1k3.y, 0);
   t.is(v1k3.z, 0);
+
+  const v1v2 = v1.mul(v2);
+  t.is(v1v2.x, -8);
+  t.is(v1v2.y, 9);
+  t.is(v1v2.z, 7);
 });
 
 //test div
@@ -134,6 +139,11 @@ test("div", (t) => {
   t.is(v1k3.x, Infinity);
   t.is(v1k3.y, -Infinity);
   t.is(v1k3.z, Infinity);
+
+  const v1v2 = v1.div(v2);
+  t.is(v1v2.x, -2);
+  t.is(v1v2.y, 1);
+  t.is(v1v2.z, 0.667);
 });
 
 //test decimals
